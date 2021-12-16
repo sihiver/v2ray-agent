@@ -2484,7 +2484,7 @@ defaultBase64Code() {
 			echoContent green "    vless://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-direct#${email}\n"
 
 			echoContent yellow " ---> Format plaintext(VLESS+TCP+TLS/xtls-rprx-direct)"
-			echoContent green "Protocol type: VLESS, address: ${host}, port: ${port}，User ID：${id}，Safety：xtls，transfer method：tcp，flow：xtls-rprx-direct，account name:${email}\n"
+			echoContent green "Protocol type: VLESS, address: ${host}, port: ${port}，User ID：${id}，Security：xtls，transfer method：tcp，flow：xtls-rprx-direct，account name:${email}\n"
 			cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 vless://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-direct#${email}
 EOF
@@ -2497,7 +2497,7 @@ EOF
 			echoContent green "    vless://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-splice#${email/direct/splice}\n"
 
 			echoContent yellow " ---> Format plaintext(VLESS+TCP+TLS/xtls-rprx-splice)"
-			echoContent green "    Protocol type: VLESS, address：${host}，port：${port}，User ID：${id}，Safety：xtls，transfer method：tcp，flow：xtls-rprx-splice，account name:${email/direct/splice}\n"
+			echoContent green "    Protocol type: VLESS, address：${host}，port：${port}，User ID：${id}，Security：xtls，transfer method：tcp，flow：xtls-rprx-splice，account name:${email/direct/splice}\n"
 			cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 vless://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-splice#${email/direct/splice}
 EOF
@@ -2509,7 +2509,7 @@ EOF
 			echoContent green "    vless://${id}@${host}:${port}?security=tls&encryption=none&host=${host}&headerType=none&type=tcp#${email}\n"
 
 			echoContent yellow " ---> Format plaintext(VLESS+TCP+TLS/xtls-rprx-splice)"
-			echoContent green "    Protocol type: VLESS, address：${host}，端口：${port}，User ID：${id}，Safety：tls，transfer method：tcp，account name:${email/direct/splice}\n"
+			echoContent green "    Protocol type: VLESS, address：${host}，port：${port}，User ID：${id}，Security：tls，transfer method：tcp，account name:${email/direct/splice}\n"
 
 			cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 vless://${id}@${host}:${port}?security=tls&encryption=none&host=${host}&headerType=none&type=tcp#${email}
@@ -2523,7 +2523,7 @@ EOF
 		echoContent green "    trojan://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-direct#${email}\n"
 
 		echoContent yellow " ---> Format plaintext(Trojan+TCP+TLS/xtls-rprx-direct)"
-		echoContent green "Protocol type: Trojan, address：${host}，port：${port}，User ID：${id}，Safety：xtls，transfer method：tcp，flow：xtls-rprx-direct，account name:${email}\n"
+		echoContent green "Protocol type: Trojan, address：${host}，port：${port}，User ID：${id}，Security：xtls，transfer method：tcp，flow：xtls-rprx-direct，account name:${email}\n"
 		cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 trojan://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-direct#${email}
 EOF
@@ -2536,7 +2536,7 @@ EOF
 		echoContent green "    trojan://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-splice#${email/direct/splice}\n"
 
 		echoContent yellow " ---> Format plaintext(Trojan+TCP+TLS/xtls-rprx-splice)"
-		echoContent green "    Protocol type: VLESS, address：${host}，port：${port}，User ID：${id}，Safety：xtls，transfer method：tcp，flow：xtls-rprx-splice，account name:${email/direct/splice}\n"
+		echoContent green "    Protocol type: VLESS, address：${host}，port：${port}，User ID：${id}，Security：xtls，transfer method：tcp，flow：xtls-rprx-splice，account name:${email/direct/splice}\n"
 		cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 trojan://${id}@${host}:${port}?encryption=none&security=xtls&type=tcp&host=${host}&headerType=none&sni=${host}&flow=xtls-rprx-splice#${email/direct/splice}
 EOF
@@ -2581,7 +2581,7 @@ EOF
 		echoContent green "    vless://${id}@${add}:${port}?encryption=none&security=tls&type=ws&host=${host}&sni=${host}&path=%2f${path}#${email}\n"
 
 		echoContent yellow " ---> Format plaintext(VLESS+WS+TLS)"
-		echoContent green "    Protocol type: VLESS, address：${add}，伪装域名/SNI：${host}，port：${port}，User ID：${id}，Safety：tls，transfer method：ws，path:/${path}，account name:${email}\n"
+		echoContent green "    Protocol type: VLESS, address：${add}，Fake domain name/SNI：${host}，port：${port}，User ID：${id}，Security：tls，transfer method：ws，path:/${path}，account name:${email}\n"
 
 		cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 vless://${id}@${add}:${port}?encryption=none&security=tls&type=ws&host=${host}&sni=${host}&path=%2f${path}#${email}
@@ -2596,7 +2596,7 @@ EOF
 		echoContent green "    vless://${id}@${add}:${port}?encryption=none&security=tls&type=grpc&host=${host}&path=${path}&serviceName=${path}&alpn=h2&sni=${host}#${email}\n"
 
 		echoContent yellow " ---> Format plaintext(VLESS+gRPC+TLS)"
-		echoContent green "    Protocol type: VLESS, address：${add}，伪装域名/SNI：${host}，port：${port}，User ID：${id}，Safety：tls，transfer method：gRPC，alpn：h2，serviceName:${path}，account name:${email}\n"
+		echoContent green "    Protocol type: VLESS, address：${add}，Fake domain name/SNI：${host}，port：${port}，User ID：${id}，Security：tls，transfer method：gRPC，alpn：h2，serviceName:${path}，account name:${email}\n"
 
 		cat <<EOF >>"/etc/v2ray-agent/subscribe_tmp/${subAccount}"
 vless://${id}@${add}:${port}?encryption=none&security=tls&type=grpc&host=${host}&path=${path}&serviceName=${path}&alpn=h2&sni=${host}#${email}
@@ -2734,8 +2734,7 @@ showAccounts() {
 
 	if echo ${currentInstallProtocolType} | grep -q 2; then
 		echoContent skyBlue "\n================================  Trojan gRPC TLS  ================================\n"
-		echoContent red "\n --->
-gRPC is currently in the testing stage and may not be compatible with the client you are using. If it cannot be used, please ignore it"
+		echoContent red "\n ---> gRPC is currently in the testing stage and may not be compatible with the client you are using. If it cannot be used, please ignore it"
 		local serviceName=
 		serviceName=$(jq -r .inbounds[0].streamSettings.grpcSettings.serviceName ${configPath}04_trojan_gRPC_inbounds.json)
 		jq .inbounds[0].settings.clients ${configPath}04_trojan_gRPC_inbounds.json | jq -c '.[]' | while read -r user; do
@@ -4006,7 +4005,7 @@ removeUnlockDNS() {
 EOF
 	reloadCore
 
-	echoContent green " ---> 卸载成功"
+	echoContent green " ---> Successfully uninstalled"
 
 	exit 0
 }
@@ -4269,9 +4268,9 @@ manageAccount() {
 # 订阅
 subscribe() {
 	if [[ -n "${configPath}" ]]; then
-		echoContent skyBlue "-------------------------备注---------------------------------"
-		echoContent yellow "# 查看订阅时会重新生成订阅"
-		echoContent yellow "# 每次添加、删除账号需要重新查看订阅"
+		echoContent skyBlue "-------------------------Remark---------------------------------"
+		echoContent yellow "# Subscription will be regenerated when viewing subscription "
+		echoContent yellow "# Every time you add or delete an account, you need to check the subscription again"
 		rm -rf /etc/v2ray-agent/subscribe/*
 		rm -rf /etc/v2ray-agent/subscribe_tmp/*
 		showAccounts >/dev/null
@@ -4286,13 +4285,13 @@ subscribe() {
 				echoContent skyBlue "--------------------------------------------------------------"
 				echoContent yellow "email：$(echo "${email}" | awk -F "[_]" '{print $1}')\n"
 				echoContent yellow "url：https://${currentHost}/s/${email}\n"
-				echoContent yellow "在线二维码：https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://${currentHost}/s/${email}\n"
+				echoContent yellow "Online QR code ：https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://${currentHost}/s/${email}\n"
 				echo "https://${currentHost}/s/${email}" | qrencode -s 10 -m 1 -t UTF8
 				echoContent skyBlue "--------------------------------------------------------------"
 			done
 		fi
 	else
-		echoContent red " ---> 未安装"
+		echoContent red " ---> Not Installed"
 	fi
 }
 
@@ -4368,7 +4367,7 @@ menu() {
 	echoContent yellow "7.Replace CDN node"
 	echoContent yellow "8.IPv6 offload"
 	echoContent yellow "9.WARP offload"
-	echoContent yellow "10.流媒体工具"
+	echoContent yellow "10.Streaming tools"
 	echoContent yellow "11.Add new port"
 	echoContent yellow "12.BT download management"
 	echoContent yellow "13.Switch alpn"
